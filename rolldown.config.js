@@ -4,6 +4,7 @@ export default defineConfig({
   input: "src/index.js",
   output: {
     preserveModules: true,
+    preserveModulesRoot: "src",
     dir: "dist",
   },
 });
