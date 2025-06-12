@@ -1,8 +1,9 @@
-# Repro for https://github.com/rolldown/tsdown/issues/319
+# Repro for https://github.com/rolldown/rolldown/issues/4934
 
 Steps:
 
 * git clone
 * pnpm install
-* `pnpm build` => Output is ok (bundled)
-* `pnpm build --unbundle` (or `unbundle: true` in `tsdown.config.ts` file) => Output is KO on windows (CSS output in the `src` folder)
+* `pnpm build` => KO (css files in src dir instead of dist dir)
+* remove preserveModules option in config
+* `pnpm build` => Output is OK
